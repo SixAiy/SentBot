@@ -59,14 +59,14 @@ exports.run = async (client, message, args, level) => {
 
                     }
                 })
-            }).catch(err => client.channels.get("609805505933606952").send(`${msg.guild.name} (${msg.guild.id})\n \`\`\`${err.stack}\`\`\``));
+            }).catch(err => msg.channel.send(`\`\`\`${err.stack}\`\`\``));
     } else if(args[0] === 'leave') {
         if (!args[1]) {
             message.channel.send("Please add the guild ID like this `..guild leave <GUIDID>`")
         } else {
             client.guilds.get(args[1]).leave()
                 .then(g => message.channel.send(`:ok_hand: i left \`${g.name}\``))
-                .catch(err => client.channels.get("609805505933606952").send(`${msg.guild.name} (${msg.guild.id})\n \`\`\`${err.stack}\`\`\``));
+                .catch(err => msg.channel.send(`\`\`\`${err.stack}\`\`\``));
         }
     }
 

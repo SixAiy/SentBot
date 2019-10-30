@@ -11,7 +11,7 @@ exports.run = async (client, message, args, level) => {
 
             message.channel.bulkDelete(fetched)
                 .then(m => message.channel.send(`${fetched.size} messages deleted`).then(async m => await m.delete([300])))
-                .catch(err => client.channels.get("609805505933606952").send(`${msg.guild.name} (${msg.guild.id})\n \`\`\`${err.stack}\`\`\``));
+                .catch(err => msg.channel.send(`\`\`\`${err.stack}\`\`\``));
         };
 
         if (args[0]) {
@@ -20,7 +20,7 @@ exports.run = async (client, message, args, level) => {
             purge(100);
         }
     } catch (err) {
-        client.channels.get("609805505933606952").send(`${msg.guild.name} (${msg.guild.id})\n \`\`\`${err.stack}\`\`\``);
+        msg.channel.send(`\`\`\`${err.stack}\`\`\``));
     }
 };
         

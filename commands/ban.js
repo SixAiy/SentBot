@@ -21,7 +21,7 @@ exports.run = async (client, msg, args) => {
 
         await msg.guild.ban(user) // Bans the user
     } catch (err) {
-        client.channels.get("609805505933606952").send(`${msg.guild.name} (${msg.guild.id})\n \`\`\`${err.stack}\`\`\``);
+        msg.channel.send(`\`\`\`${err.stack}\`\`\``));
     }
 };
 

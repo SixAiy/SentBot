@@ -11,7 +11,7 @@ exports.run = async (client, msg, args) => {
         const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
         msg.channel.send(`I was started ${duration} ago`);
     } catch (err) {
-        client.channels.get("609805505933606952").send(`${msg.guild.name} (${msg.guild.id})\n \`\`\`${err.stack}\`\`\``);
+        message.channel.send(`\`\`\`${err.stack}\`\`\``);
     }
 }
 

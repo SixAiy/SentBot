@@ -21,7 +21,7 @@ exports.run = async (client, msg, args, level) => {
 		   .setTimestamp();
 		msg.channel.send({ embed: e });
     } catch (err) {
-		client.channels.get("609805505933606952").send(`${msg.guild.name} (${msg.guild.id})\n \`\`\`${err.stack}\`\`\``);
+		message.channel.send(`\`\`\`${err.stack}\`\`\``);
     }
 };
 

@@ -3,18 +3,11 @@ const
     { promisify } = require("util"),
     readdir = promisify(require("fs").readdir),
     Enmap = require("enmap"),
-    Anti = require("./core/antispam").AntiSpam,
     client = new Discord.Client();
 
 client.config = require('./core/config.js');
 client.logger = require("./core/Logger.js");
 require("./core/functions.js")(client);
-require("./core/audio.js")(client);
-
-// New System for command handling!
-client.cmds = new Enmap();
-client.cmdModules = new Enmap();
-
 
 client.commands = new Enmap();
 client.aliases = new Enmap();
@@ -66,25 +59,6 @@ const init = async () => {
         return shardin;
     }
     client.login(client.config.token);
-
-    client.on('raw', event => {
-        const eventName = event.t;
-        if (eventName == 'MESSAGE_REACTION_ADD') {
-            if (event.d.message_id == '188571987835092992') {
-                const reactionChannel = client.channels.get(event.d.channel_id);
-                if (reactionChannel.messages.has(event.d.message_id)) {
-                    return;
-                } else {
-                    reactionChannel.fetchMessage(event.d.message_id)
-                        .then(msgg => {
-                            console.log(msgg)
-                        }).catch(err => console.log(err.stack));
-
-                }
-
-            }
-        }
-    })
 };
 
 init();

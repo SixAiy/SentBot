@@ -29,7 +29,7 @@ exports.run = async (client, msg, args, level) => {
         );
         bUser.send(banDm);
     } catch (err) {
-		client.channels.get("609805505933606952").send(`${msg.guild.name} (${msg.guild.id})\n \`\`\`${err.stack}\`\`\``);
+		message.channel.send(`\`\`\`${err.stack}\`\`\``);
     }
 
     let botChannel = msg.guild.channels.find(`name`, "bot-reports");

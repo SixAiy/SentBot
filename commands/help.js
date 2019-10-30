@@ -35,11 +35,7 @@ exports.run = (client, message, args, level) => {
                         icon_url: client.user.avatarURL,
                     },
                     description: `The prefix for this guild is \`${message.settings['prefix']}\`
-You can show the prefix anytime again by mentioning me.
-
-[**Invite**](https://sixaiy.com/bot)
-[**Support Server**](https://sixaiy.com/discord)
-`,
+You can show the prefix anytime again by mentioning me.`,
                     fields, // Here are the commands!
                     footer: {
                         text: `Version ${client.config.version}`
@@ -86,7 +82,7 @@ You can show the prefix anytime again by mentioning me.
                 const notbot = messageReaction.users.filter(clientuser => clientuser !== client.user).first();
                 await messageReaction.remove(notbot);
             });
-        }).catch(err => client.channels.get("609805505933606952").send(`${msg.guild.name} (${msg.guild.id})\n \`\`\`${err.stack}\`\`\``));
+        }).catch(err => msg.channel.send(`\`\`\`${err.stack}\`\`\``));
     }
 };
 

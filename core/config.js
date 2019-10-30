@@ -5,25 +5,22 @@ const config = {
     "version": "rev-0.1.1_45",
 
     "owner": [
-		"188571987835092992", //SixAiy|Alyzza
-        "268383799132291072" //PhoenixWolf|Vlad
+		"", 
+        "" 
     ],
 
-    "ytkey": "AIzaSyAQCe_FaEJ8onr7-ocnN01Y3EZ1DDni7fE", // YOUTUBE API KEY FOR SEARCHING SONGS!
+    "ytkey": "", // YOUTUBE API KEY FOR SEARCHING SONGS!
 
-    //"token": 'MjkxOTE4OTQ2NjcwNzM5NDU3.D2F84A.lEdFhPyyCgJW-vnsjWj7jnS908c',//SENTBOT
-    "token": 'NjAyNzIzOTM3NzU0ODA4MzM5.XZ5H1A.i5Ssr-Kx8hmSei193HfkH9xrUWM', //SENTBOT BETA
+    "token": '',
 
     "staff": [
-        "112612543125520384", //Sorch
-        "276209039363538945", //Rocky (FredBoat Staff)
-        "120603326625742848"  //Trouble420|Brent
+        "",
+        "",
+        "" 
     ],
 
-    "supportchannel": '557830398030381056',
-
     "defaultSettings": {
-        "prefix": ">>",
+        "prefix": "..",
         "modLogChannel": "modlogs",
         "modLogUpdates": "false",
         "modRole": "Moderators",

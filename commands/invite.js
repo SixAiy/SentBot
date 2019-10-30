@@ -1,5 +1,5 @@
 exports.run = async (client, msg, args) => {
-    msg.channel.send(`Invite link for **${client.user.username}:** <https://sixaiy.com/bot>`);
+    msg.channel.send(`Invite link for **${client.user.username}:** <https://discordapp.com/oauth2/authorize?&client_id=${client.user.id}&scope=bot&permissions=305261958>`);
 }
 
 exports.conf = {

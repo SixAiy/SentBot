@@ -20,7 +20,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         .setFooter(`ID: ${message.guild.id}`)
         .setTimestamp()
     message.channel.send({ embed })
-	} catch(err) { client.channels.get("609805505933606952").send(`${msg.guild.name} (${msg.guild.id})\n \`\`\`${err.stack}\`\`\``); }
+	} catch(err) { message.channel.send(`\`\`\`${err.stack}\`\`\``); }
 };
 
 exports.conf = {
