@@ -1,2 +1,2 @@
 # SentBot
- SentBot runs on the custom .js Library 
+ SentBot is a Open Source Discord Music Bot Licsened under the AGPLv3
