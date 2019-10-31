@@ -5,11 +5,9 @@ const config = {
     "version": "rev-0.1.1_45",
 
     "owner": [
-		"", 
+	"", 
         "" 
     ],
-
-    "ytkey": "", // YOUTUBE API KEY FOR SEARCHING SONGS!
 
     "token": '',
 
