@@ -58,7 +58,7 @@
     "moment": "^2.24.0",
     "moment-duration-format": "^2.2.2",
     "moment-timezone": "^0.5.23",
-    "mongoose": "^5.6.10",
+    "mongoose": "^5.7.5",
     "mph-to-kmh": "^1.0.0",
     "mysql": "^2.16.0",
     "node-cmd": "^3.0.0",
