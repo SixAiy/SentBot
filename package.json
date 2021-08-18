@@ -53,7 +53,7 @@
     "humanize": "0.0.9",
     "js": "^0.1.0",
     "kmh-to-mph": "^1.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mariadb": "^2.0.3",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.2.2",
